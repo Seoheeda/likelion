@@ -1,0 +1,315 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: inherit;
+    font: inherit;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+
+a:link, a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+.all {
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    background: #0066FF;
+
+}
+
+/* navigator  */
+
+.navigator {
+    top: 0;
+    width: 100%;
+    height: 4rem;
+    align-items: center;
+    background: #0066FF;
+    font-size: .5rem;
+    position: sticky;
+}
+
+.navigators {
+    width: flex;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0066FF;
+    color: white;
+    padding: 2.4rem 11.5rem;
+    cursor: pointer;
+
+
+}
+
+.navigators a img {
+    width: 11rem;
+}
+
+.navigator2 {
+    font-size: 15px;
+}
+
+
+/* main  */
+/* main-left  */
+
+.main {
+    justify-content: space-between;
+    display: flex;
+}
+
+.grid {
+    display: grid;
+    width: 1400px;
+    height: 70%;
+    padding: 0 1.25rem;
+    align-items: center;
+    background: #0066FF;
+    grid-template-columns: 850px 500px;
+    margin-top: 2rem;
+    justify-content: space-between;
+}
+
+.main-left {
+    height: 100%;
+    padding: 2.5rem 10rem;
+    float: left;
+}
+
+.title1 {
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    font-size: 18px;
+    color: #FFFFFFB3;
+}
+
+.title2 {
+    font-size: 25px;
+    color: white;
+    font-weight: 700;
+
+}
+
+.main-left img {
+    width: 95%;
+}
+
+
+/* main-right  */
+
+.main-right {
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    float: right;
+}
+
+.box {
+    width: 400px;
+    height: 530px;
+    border: 1px solid #d7d7d7;
+    background: white;
+    display: flex;
+    box-sizing: content-box;
+    flex-direction: column;
+    align-items: center;
+    justify-content: right;
+    margin-top: 6rem;
+    margin-right: 2rem;
+    border-radius: 1rem;
+    padding: 0px 30px;
+    float: right;
+}
+
+.box-title {
+    display: grid;
+    width: 460px;
+    height: 3rem;
+    align-items: center;
+	grid-template-columns: 200px 200px;
+    cursor: pointer;
+    background: #f4f4f4;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.login-title {
+    width: 230px;
+    height: 100%;
+    align-items: center;
+    border-radius: 1rem 1rem 0 0;
+    box-sizing: content-box;
+    background: white;
+    color: #0078FF;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+
+}
+
+.join-title {
+    /* display: flex; */
+    width: 230px;
+    height: 100%;
+    align-items: center;
+    border-radius: 0 1rem 0 0;
+    box-sizing: content-box;
+    color: #000000;  
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-left: 2rem;
+}
+
+.email-input-title {
+    font-size: 15px;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.password-input-title {
+    font-size: 15px;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.password-input-title a {
+    color: #3376F6; 
+    margin-left: 60%;  
+}
+
+
+
+.email input {
+    width: 100%;
+    height: 2.5rem;
+    padding: 0.5rem 2.5rem 0.5rem 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: #d2d2d2;
+    color: #d2d2d2;
+    border-radius: 0.2rem;
+}
+
+
+.icon-email {
+    position: absolute;
+    left: 1rem;
+
+}
+
+.password input {
+    width: 100%;
+    height: 2.5rem;
+    padding: 0.5rem 2.5rem 0.5rem 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: #d2d2d2;
+    color: #d2d2d2;
+    border-radius: 0.2rem;
+}
+
+
+::placeholder {
+    color: #d2d2d2;
+}
+
+.password-eye img{
+    width: 2rem;
+    position: absolute;
+    right: 1rem;
+}
+
+.login-button {
+    width: 100%;
+    height: 2.7rem;
+    background: #4981F8;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 2.5rem;
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 0.2rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.other-login {
+    width: 400px;
+    height: 100px;
+}
+
+.login-ways {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.login-ways button {
+    border: none;
+    background-color: white;
+    cursor: pointer;
+
+}
+
+.login-ways img {
+    width: 3rem;
+    border-radius: 0.5rem;
+}
+
+.other-login-words {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 13px;
+    font-display: 100;
+}
+
+.words {
+    color: #505050;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
+.bottom {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 1rem;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+hr {
+    width: 1px;
+    color: white;
+    height: 1rem;
+    margin: 1rem;
+}
+
+.private {
+    font-weight: 700;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>프로그래머스</title>
+
+    <link rel="stylesheet" href="./week1.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Noto+Sans+KR&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="all">
+        <div class="navigator">
+            <div class="navigators">
+                <a class="navigator1" href="./index.html">
+                    <img src="./MainLogo.png" alt="mainlogo">
+                </a>
+                <a class="navigator2" href="https://business.programmers.co.kr/">
+                    기업서비스</a>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="grid">
+                <div class="main-left">
+                    <div class="title1">개발자 전용</div>
+                    <div class="title2">반가워요, 개발자의 성장을 돕는<br>프로그래머스입니다.</div>
+                    <img src="./Background.png" alt="background">
+                </div>
+
+
+                <div class="main-right">
+                    <div class="box">
+                        <div class="box-title">
+                            <div class="login-title">로그인</div>
+                            <div class="join-title">회원가입</div>
+                        </div>
+
+                        <div class="login-input">
+                            <div class="email">
+                                <div class="email-input-title">이메일
+                                </div>
+
+                                <div class="email-input">
+                                    <input type="email" name="id" placeholder="이메일을 입력해 주세요.">
+                                </div>
+                            </div>
+
+                            <div class="password">
+                                <div class="password-input-title">비밀번호
+                                    <a href="https://programmers.co.kr/account/reset_password">비밀번호 재설정</a>
+                                </div>
+
+                                <div class="password-input">
+                                    <input type="password" , placeholder="비밀번호를 입력해 주세요">
+                                </div>
+                                <!-- <div class="password-eye">
+                                    <img src="./Eye1.png" alt="eye">
+                                </div> -->
+                            </div>
+                            <button class="login-button">로그인</button>
+                            <div class="other-login">
+                                <div class="other-login-words">다른 계정으로 로그인 하기</div>
+                                <div class="login-ways">
+                                    <button class="google" onclick="location.href='https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?response_type=code&client_id=697220841411-gonnvfdbvgnlut7mhb81buraqh61fj50.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fprogrammers.co.kr%2Fusers%2Fauth%2Fgoogle%2Fcallback&state=38f222c7131bd550ccc27f4f335c6994c5c67e1bbee57ccf&scope=email&access_type=offline&service=lso&o2v=1&flowName=GeneralOAuthFlow'">
+                                        <img src="./GoogleLogo.png" alt="google">
+                                        <div class="words">Google</div>
+                                    </button>
+                                    <button class="kakao" onclick="location.href='https://accounts.kakao.com/login/?continue=https%3A%2F%2Fkauth.kakao.com%2Foauth%2Fauthorize%3Fresponse_type%3Dcode%26redirect_uri%3Dhttps%253A%252F%252Fprogrammers.co.kr%252Fusers%252Fauth%252Fkakao%252Fcallback%26state%3D476c796e070b06bc0b225854e85514c7bed83f1c678c7c76%26scope%255B%255D%3Daccount_email%26through_account%3Dtrue%26client_id%3Dab64d75703ee3d2f08f4c2e0ffe1dee7#login'"">
+                                        <img src="./KakaoLogo.png" alt="kakao">
+                                        <div class="words">Kakao</div>
+                                    </button>
+                                    <button class="github" onclick="location.href='https://github.com/login/oauth/authorize?response_type=code&client_id=25a33d959e956122e7c2&redirect_uri=https%3A%2F%2Fprogrammers.co.kr%2Fusers%2Fauth%2Fgithub%2Fcallback&state=80b29cfeecddde5629ae0493ffcfa92cdd2ebc8c9397d421&scope=user%3Aemail%2Cread%3Aorg%2Cread%3Auser'"">
+                                        <img src="./GithubLogo.png" alt="github">
+                                        <div class="words">Github</div>
+                                    </button>
+                                    <button class="facebook" onclick="location.href='https://www.facebook.com/login.php?skip_api_login=1&api_key=339079816467879&kid_directed_site=0&app_id=339079816467879&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fv5.0%2Fdialog%2Foauth%3Fresponse_type%3Dcode%26client_id%3D339079816467879%26redirect_uri%3Dhttps%253A%252F%252Fprogrammers.co.kr%252Fusers%252Fauth%252Ffacebook%252Fcallback%26state%3Deb75bbe86f979d8523d1902f60275d009cd349c5920c0c29%26scope%3Demail%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D2461aefc-a73c-4a0d-a816-3cc1333eb58f%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fprogrammers.co.kr%2Fusers%2Fauth%2Ffacebook%2Fcallback%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3Deb75bbe86f979d8523d1902f60275d009cd349c5920c0c29%23_%3D_&display=page&locale=ko_KR&pl_dbl=0'"">
+                                        <img src="./FacebookLogo.png" alt="facebook">
+                                        <div class="words">Facebook</div>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <a href="https://programmers.co.kr/tos" class="terms">이용약관</a>
+                        <hr>
+                        <a href="https://programmers.co.kr/privacy" class="private">개인정보처리방침</a>
+                        <hr>
+                        <a href="https://programmers.zendesk.com/hc/ko" class="faq">FAQ/문의</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
