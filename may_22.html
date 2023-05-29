@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <button id="btn">Click me</button>
+        <script>
+            const button = document.getElementById('btn');
+            button.addEventListener("click", (event) => {
+                alert(event.target.innerText);
+            });
+            // button 이라는 변수에 위에서 생성한 btn 할당
+            // adEventListener로 듣다가 클릭이라는 이벤트 발생 시 alert 함수 실행
+        </script>
+    </body>
+</html>
