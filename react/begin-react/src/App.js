@@ -1,23 +1,16 @@
-import React from 'react';
-import FirstComponent from './FirstComponent';
-
-function Box({ children }) {
-  return (
-    <div style={{ display: "flex", flexDirection: "column" , backgroundColor:"orange"}}>
-      {children}
-    </div>
-  );
-}
+import React, { useState } from 'react';
 
 function App() {
-  
+	const [count, setCount] = useState(0);
+
+	function handleClick() {
+		count = count + 1;
+	}
+
   return (
     <div>
-      <Box>
-        <FirstComponent />
-        <FirstComponent univ="경희대"/>
-        <FirstComponent univ="시립대"/>
-      </Box>
+      <button onClick={handleClick}>버튼</button>
+      <div>버튼을 {count}번 눌렀습니다!</div>
     </div>
   );
 }
