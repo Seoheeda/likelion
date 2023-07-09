@@ -12,6 +12,13 @@ import Signin from './pages/Signin';
 
 const App = () => {
   const [posts, setPosts] = useState([]);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  // const [nickname, setNickname] = useState('');
+  const [realnickname, setRealNickname] = useState('');
+  const [realpassword, setRealpassword] = useState('');
+  const [isSignedIn, setIsSignedIn] = useState(false);
+
+
 
   const addPost = (newPost) => {
     setPosts([...posts, newPost]);
@@ -27,6 +34,18 @@ const App = () => {
     );
   };
 
+
+  const handleLogout  = () => {
+    setIsLoggedIn(false); 
+  };
+
+  const handleSignin = (nickname, password, realnickname, realpassword) => {
+    if (nickname === realnickname && password === realpassword) {
+      setIsLoggedIn(true);
+    }
+
+  };
+  
   const Head = styled.div`
   background-Color: lightblue;
 `;
@@ -50,17 +69,17 @@ const App = () => {
   return (
     <Router>
       <Whole>
-        <Head>
-          <Header />
+        <Head> 
+          <Header isLoggedIn={isLoggedIn} handleLogout ={handleLogout}/>
         </Head>
         <Body>
           <Routes>
-            <Route path="/" element={<PostList posts={posts.length === 0 ? PostList.defaultProps.posts : posts} />} />
+            <Route path="/" element={<PostList posts={posts} isLoggedIn={isLoggedIn} />} />
             <Route path="/write" element={<Upload addPost={addPost} />} />
-            <Route path="/post/:id" element={<PostDetail posts={posts.length === 0 ? PostList.defaultProps.posts : posts} deletePost={deletePost} setPosts={setPosts} />}></Route>
+            <Route path="/post/:id" element={<PostDetail posts={posts} deletePost={deletePost} setPosts={setPosts}/>}></Route>
             <Route path="/post/edit/:id" element={<PostEdit posts={posts} updatePost={updatePost} />}></Route>
-            <Route path="/login" element={<Login />}></Route>
-            <Route path="/signin" element={<Signin />}></Route>
+            <Route path="/login" element={<Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} realnickname={realnickname} realpassword={realpassword} onSignin={handleSignin}/>}></Route>
+            <Route path="/signin" element={<Signin onSignin={handleSignin} setIsSignedIn={setIsSignedIn} isSignedIn={isSignedIn} onSignin={handleSignin}/>}></Route>
           </Routes>
         </Body>
         <Foot>
@@ -72,4 +91,5 @@ const App = () => {
 };
 
 export default App;
+
 

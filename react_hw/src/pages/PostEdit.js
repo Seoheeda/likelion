@@ -12,9 +12,13 @@ const PostEdit = ({ posts, updatePost }) => {
   const [content, setContent] = useState(post ? post.content : '');
 
   const handleUpdate = () => {
-    const updatedPost = { id: post.id, title:title, content:content };
+    const updatedPost = { id: post.id, 
+      title: title, 
+      content: content,
+       time: post.time,
+       };
     updatePost(updatedPost);
-    history(`/post/${post.id}`); 
+    history(`/post/${post.id}`);
   };
 
   if (!post) {
@@ -30,7 +34,7 @@ const PostEdit = ({ posts, updatePost }) => {
             type="text"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            style={{width:'1000px', height: '30px', marginBottom: '30px'}}
+            style={{ width: '1000px', height: '30px', marginBottom: '30px' }}
           />
         </div>
         <div>
@@ -40,12 +44,14 @@ const PostEdit = ({ posts, updatePost }) => {
             style={{ width: '1000px', height: '400px' }}
           ></textarea>
         </div>
-        <button onClick={handleUpdate} style={{marginRight:'10px'}}>
-          Save
-        </button>
-        <Link to="/">
-        <button>Cancel</button>
-        </Link>
+        <div style={{marginBottom:'10px'}}> 
+          <button onClick={handleUpdate} style={{ marginRight: '10px' }}>
+            Save
+          </button>
+          <Link to="/">
+            <button>Cancel</button>
+          </Link>
+        </div>
       </form>
     </div>
   );

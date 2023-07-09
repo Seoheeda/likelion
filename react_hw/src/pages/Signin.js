@@ -10,30 +10,22 @@ const Box = styled.div`
   border: 1px solid black;
 `;
 
-const Signin = () => {
-    const [nickname, setNickname] = useState('');
-    const [password, setPassword] = useState('');
+const Signin = ({onSignin}) => {
+  const [realnickname, setRealNickname] = useState('');
+  const [realpassword, setRealPassword] = useState('');
 
-    const nameChange = (e) => {
-        setNickname(e.target.value);
+  const realnameChange = (e) => {
+    setRealNickname(e.target.value);
+  };
+
+  const realpasswordChange = (e) => {
+    setRealPassword(e.target.value);
+  };
+
+  const Submit = (e) => {
+    e.preventDefault();
+    onSignin(realnickname, realpassword);
     };
-
-    const passwordChange = (e) => {
-        setPassword(e.target.value);
-    };
-
-    const Submit = (e) => {
-        e.preventDefault();
-        // 로그인 처리 로직
-        // ...
-
-        // 입력 값을 사용하여 로그인 동작 수행
-        console.log('nickname:', nickname);
-        console.log('Password:', password);
-    };
-
-
-
 
     return (
         <div >
@@ -46,8 +38,8 @@ const Signin = () => {
                         <label style={{marginRight:'10px'}}>Nickname:</label>
                         <input 
                             id="nickname" 
-                            value={nickname} 
-                            onChange={nameChange} 
+                            value={realnickname}
+                            onChange={realnameChange}
                             style={{width:'200px'}}
                         />
                     </div>
@@ -55,12 +47,12 @@ const Signin = () => {
                         <label style={{marginRight:'10px'}}>Password:</label>
                         <input 
                             id="password" 
-                            value={password} 
-                            onChange={passwordChange} 
+                            value={realpassword}
+                            onChange={realpasswordChange}
                             style={{width:'200px'}}
                             />
                     </div>
-                    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '30px'}}>
+                    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '50px'}}>
                     <button type="submit">SignIn</button>
                     </div>
                 </form>

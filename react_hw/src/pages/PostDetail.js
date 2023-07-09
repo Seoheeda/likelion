@@ -16,9 +16,6 @@ const PostDetail = ({ posts, deletePost, setPosts }) => {
   };
 
   const handleAddComment = () => {
-
-
-
     const newComment = {
       id: Date.now(),
       content: comment,
@@ -46,25 +43,30 @@ const PostDetail = ({ posts, deletePost, setPosts }) => {
     return <p>No Post to be Found.</p>;
   }
 
+  const Box = styled.div`
+    display: inline-block;
+    width: 1000px;
+    height: 200px;
+    padding: 10px;
+    border: 1px solid black;
+  `;
 
-const Box = styled.div`
-  display: inline-block;
-  width: 1000px;
-  height: 200px;
-  padding: 10px;
-  border: 1px solid black;
-`;
-
+  const now = new Date();
+  const time = now.toLocaleString();
 
   return (
     <div>
-      <h1> {post.title}</h1>
+      <h1>{post.title}</h1>
       <Box>{post.content}</Box>
       <p style={{ textAlign: 'right' }}>{post.time}</p>
       <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '30px', alignItems: 'right' }}>
-        <button onClick={handleDelete} style={{marginRight:'10px'}}>Delete</button>
+        <button onClick={handleDelete} style={{ marginRight: '10px' }}>
+          Delete
+        </button>
         <button>
-          <Link to={`/post/edit/${post.id}`} style={{textDecoration:'none'}}>Edit</Link>
+          <Link to={`/post/edit/${post.id}`} style={{ textDecoration: 'none' }}>
+            Edit
+          </Link>
         </button>
       </div>
 
@@ -75,13 +77,13 @@ const Box = styled.div`
         ) : (
           <ul>
             {comments.map((comment) => (
-              <ul key={comment.id}>
-                <p>{comment.content}</p>
-                <p>{comment.time}</p>
-                <div>
-                  <button onClick={() => handleDeleteComment(comment.id)}>
-                    Delete
-                  </button>
+              <ul style={{display:'flex'}} key={comment.id}>
+                <p>
+                  {comment.content}
+                </p>
+                <p style={{marginLeft:'auto', marginRight:'50px'}}>{comment.time}</p>
+                <div style={{marginRight:'300px', marginTop:'15px'}}>
+                  <button onClick={() => handleDeleteComment(comment.id)}>Delete</button>
                 </div>
               </ul>
             ))}
@@ -93,9 +95,14 @@ const Box = styled.div`
             value={comment}
             onChange={(e) => setComment(e.target.value)}
             placeholder="Comment Here"
-            style={{ width: '900px', height: '25px', marginBottom:'20px'}}
+            style={{ width: '900px', height: '25px', marginBottom: '20px' }}
           />
-          <button onClick={handleAddComment} disabled={!comment} style={{ width: '100px', height: '30px', marginLeft: '20px' }}>
+
+          <button
+            onClick={handleAddComment}
+            disabled={!comment}
+            style={{ width: '100px', height: '30px', marginLeft: '20px' }}
+          >
             Comment
           </button>
         </div>
@@ -104,5 +111,5 @@ const Box = styled.div`
   );
 };
 
-
 export default PostDetail;
+
