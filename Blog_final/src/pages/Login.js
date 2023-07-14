@@ -66,7 +66,7 @@ const Login = ({ isLoggedIn, setIsLoggedIn, posts }) => {
                             />
                         </div>
                         <div style={{ display: 'flex', justifyContent: 'center', marginTop: '50px' }}>
-                            <button type="submit">LogIn</button>
+                            <button type="Submit">LogIn</button>
                         </div>
                     </form>
                 </Box>

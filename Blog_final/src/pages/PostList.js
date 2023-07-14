@@ -61,6 +61,8 @@ const PostList = ({ posts, isLoggedIn }) => {
   );
 }
 
+export default PostList;
+
 // PostList.defaultProps = {
 //   posts: [
 //     {
@@ -72,5 +74,5 @@ const PostList = ({ posts, isLoggedIn }) => {
 //   ],
 // };
 
-export default PostList;
+
 
