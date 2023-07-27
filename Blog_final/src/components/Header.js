@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Header = ({ isLoggedIn, handleLogout, nickname }) => {
   return (
     <header>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+      <div style={{ display: 'flex', jstifyConutent: 'space-between', alignItems: 'center' }}>
         <div style={{ display: 'flex', alignItems: 'center' }}>
           <Link to="/" style={{ textDecoration: 'none', marginLeft: '30px' }}>
             <h1>Life Story</h1>
@@ -21,14 +21,14 @@ const Header = ({ isLoggedIn, handleLogout, nickname }) => {
               </Link>
             </div>
           ) : (
-            <>
+            <div style={{marginLeft:'1300px'}}>
               <Link to="./login">
                 <button>LogIn</button>
               </Link>
               <Link to="./signin">
                 <button style={{ margin: '10px' }}>SignIn</button>
               </Link>
-            </>
+            </div>
           )}
         </div>
       </div>
