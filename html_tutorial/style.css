@@ -50,4 +50,38 @@ button:hover {
 
 .language {
     color: blue;
+} 
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding-right: 20px;
+    box-sizing: border-box;
 }
+
+.topFootersection{
+    border-bottom: 1px solid lightgray;
+    padding: 10px;
+}
+
+.bottomFootersection {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+span {
+    font-size: 13px;
+}
+
+.bottomLeftsection {
+    display: flex;
+    gap: 20px;
+}
+
+.bottomRightsection {
+    display: flex;
+    gap: 20px;
+}
+
