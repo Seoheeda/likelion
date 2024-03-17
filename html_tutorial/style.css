@@ -1,0 +1,53 @@
+.headerRight {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    height: 40px;
+    align-items: center;
+    padding: 10px;
+}
+
+.profile {
+    border-radius: 20px;
+}
+
+.logosection {
+    margin-top: 10%;
+    text-align: center;
+}
+
+.inputsection {
+    text-align: center;
+    padding: 30px;
+    margin: 10px;
+}
+
+input {
+    width: 40%;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid lightgray;
+}
+
+.buttonAndLangsection {
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    border: 1px solid lightgray;
+  }
+
+.language {
+    color: blue;
+}
