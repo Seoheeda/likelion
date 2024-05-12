@@ -1,0 +1,21 @@
+/*Activities*/
+.activities {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+.activities div {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 50px;
+}
+.activities img {
+    height: 200px;
+}
+.txt {
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+}

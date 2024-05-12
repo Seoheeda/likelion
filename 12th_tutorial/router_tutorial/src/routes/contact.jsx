@@ -1,12 +1,10 @@
-// src/routes/contact.jsx
-
 import { Form } from "react-router-dom";
 
 export default function Contact() {
   const contact = {
     first: "Your",
     last: "Name",
-    avatar: "https://picsum.photos/200/300",
+    avatar: "https://placekitten.com/g/200/200",
     twitter: "your_handle",
     notes: "Some notes",
     favorite: true,

@@ -1,5 +1,3 @@
-// touch src/error-page.jsx
-
 import { useRouteError } from "react-router-dom";
 
 export default function ErrorPage() {

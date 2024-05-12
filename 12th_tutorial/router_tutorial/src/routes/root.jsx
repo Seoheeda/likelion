@@ -1,3 +1,4 @@
+// src/routes/root.jsx
 import { Outlet } from "react-router-dom";
 
 export default function Root() {

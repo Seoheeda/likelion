@@ -1,0 +1,20 @@
+/*introduce-values, strenghts*/
+.introduce{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+}
+.introduce div {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+.introduce h3 {
+    margin-bottom: 2px;
+}
+.introduce span {
+    margin-bottom: 10px;
+}
+.introduce ul {
+    padding-left: 20px;
+}

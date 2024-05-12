@@ -1,0 +1,50 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    background: linear-gradient(90deg, #b1e2ec, #a7a7d7);
+    color:aliceblue;
+    margin-bottom: 50px;
+}
+.aboutme {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+.aboutme img {
+    display: flex;
+    align-items: center;
+    border-radius:100px;
+    height: 200px;
+}
+.aboutme div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.aboutme h1 {
+    margin: 0px;
+    padding: 0px;
+}
+.aboutme ul {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+.likes {
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    padding: 0px;
+    flex-wrap: nowrap; 
+    white-space: nowrap;
+}
+a {
+    text-decoration-line: none;
+    color:#181818;
+}
